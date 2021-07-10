@@ -4,33 +4,39 @@
 #include <string.h>
 #include <malloc.h>
 
-//½ºÅÃÀ» À§ÇÑ ±¸Á¶Ã¼
+#define swap(a, b, type) do { \
+	type tmp = a; \
+	a = b; \
+	b = tmp; \
+} while (0)
+
+//ìŠ¤íƒì„ ìœ„í•œ êµ¬ì¡°ì²´
 typedef struct Node {
 	int Left;
 	int Right;
 	struct Node* Down;
 } Node;
 
-//¹öºí Á¤·Ä
+//ë²„ë¸” ì •ë ¬
 void BubbleSort(int DataSet[], int Length);
-//»ğÀÔ Á¤·Ä
+//ì‚½ì… ì •ë ¬
 void InsertionSort(int Dataset[], int Length);
-//½º¿Ò
+//ìŠ¤ì™‘
 void Swap(int* A, int* B);
-//ÆÄÆ¼´Ù!!!
+//íŒŒí‹°ë‹¤!!!
 int Partition(int DataSet[], int Left, int Right);
-//quickÁ¤·Ä
+//quickì •ë ¬
 void QuickSort(int DataSet[], int Left, int Right);
-//qsort¸¦ À§ÇÑ ÇÔ¼ö
+//qsortë¥¼ ìœ„í•œ í•¨ìˆ˜
 int CompareScore(const void* _elem1, const void* _elem2);
-//½ºÅÃÀ» ÀÌ¿ëÇÑ ÄüÁ¤·Ä
+//ìŠ¤íƒì„ ì´ìš©í•œ í€µì •ë ¬
 void SQuickSort(int DataSet[], int Length);
-//³ëµå ¸¸µé±â
+//ë…¸ë“œ ë§Œë“¤ê¸°
 Node* QCreateNode(int Left, int Right);
-//Çª½¬
+//í‘¸ì‰¬
 void QPush(Node** Stack, Node* NewNode);
-//ÆË
+//íŒ
 Node* QPop(Node** Stack);
-//ºøÁúÁ¤·Ä
+//ë¹—ì§ˆì •ë ¬
 void comb_sort(int* data, int n);
 #endif //SORT_H
