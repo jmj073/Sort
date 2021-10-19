@@ -56,7 +56,7 @@ void QuickSort(iter Left, iter Right, int n_thread) {
 				task.swap(tmp);
 			}
 			if (Right != Index)
-				QuickSort(Index + 1, Right, --n_thread);
+				QuickSort(Index + 1, Right, n_thread);
 		}
 		else {
 			if (Left != Index)
